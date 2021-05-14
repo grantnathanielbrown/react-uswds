@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Card, CardHeader, CardBody } from '@trussworks/react-uswds';
 const dummyInformation = {
     DUNS: 1144062,
     EIN: 60675574,
@@ -11,17 +11,17 @@ const dummyInformation = {
 
 export default function OrganizationInfoCard() {
     return (
-        
-        <div id="organizationInfoCard">
-            <div id="organizationICName">
-                <h3>{dummyInformation.NAME}</h3>
-            </div>
-            <div id="organizationICRow">
-                <span>DUNS: {dummyInformation.DUNS}</span>
-                <span>EIN: {dummyInformation.EIN}</span>
-                <span>UEI: {dummyInformation.UEI}</span>
-                <span></span><span></span><span></span>
-            </div>
-        </div>
+        <Card>
+            <CardHeader>
+                    <h3>{dummyInformation.NAME}</h3>
+            </CardHeader>
+            <CardBody>
+                    <span>DUNS: {dummyInformation.DUNS}</span>
+                    <span>EIN: {dummyInformation.EIN}</span>
+                    <span>UEI: {dummyInformation.UEI}</span>
+                    <span>LOCATION: {dummyInformation.LOCATION}</span>
+                    <span id="organizationWebsiteLink">WEBSITE: <a href={dummyInformation.WEBSITE}>{dummyInformation.WEBSITE}</a></span>
+            </CardBody>
+        </Card>
     )
 }

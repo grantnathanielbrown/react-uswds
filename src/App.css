@@ -1,3 +1,9 @@
+/* ALL */
+
+li {
+  list-style: none;
+}
+
 /* ORGANIZATION HEADER */
 
 .grid-row img {
@@ -16,7 +22,28 @@
 
 /* ORGANIZATION INFO */
 
+.usa-card__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 #organizationInfoCard {
   display: flex;
   flex-direction: column;
+}
+
+.usa-card__body span {
+  margin: 0 2rem;
+}
+
+/* COMPLIANCE CARD */
+
+.grid-container-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-container-card header {
+  padding: 0;
 }
